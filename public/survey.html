@@ -28,7 +28,7 @@
         </h3>
         <h4>Do you want kids?</h4>
         <div class="form-group">
-            <select class="custom-select form-control">
+            <select id="q1" class="custom-select form-control">
                 <option selected>Open this select menu</option>
                 <option value="1">Strong Disagree</option>
                 <option value="2">Two</option>
@@ -43,7 +43,7 @@
             </h3>
             <h4>Do you enjoy reading?</h4>
             <div class="form-group">
-                <select class="custom-select form-control">
+                <select id="q2" class="custom-select form-control">
                     <option selected>Open this select menu</option>
                     <option value="1">Strong Disagree</option>
                     <option value="2">Two</option>
@@ -59,7 +59,7 @@
                 </h3>
                 <h4>Is race important to you?</h4>
                 <div class="form-group">
-                    <select class="custom-select form-control">
+                    <select id="q3" class="custom-select form-control">
                         <option selected>Open this select menu</option>
                         <option value="1">Strong Disagree</option>
                         <option value="2">Two</option>
@@ -75,7 +75,7 @@
                     </h3>
                     <h4>Do you believe in shared bank accounts?</h4>
                     <div class="form-group">
-                        <select class="custom-select form-control">
+                        <select id="q4" class="custom-select form-control">
                             <option selected>Open this select menu</option>
                             <option value="1">Strong Disagree</option>
                             <option value="2">Two</option>
@@ -91,7 +91,7 @@
                         </h3>
                         <h4>Are you a home body person?</h4>
                         <div class="form-group">
-                            <select class="custom-select form-control">
+                            <select id="q5" class="custom-select form-control">
                                 <option selected>Open this select menu</option>
                                 <option value="1">Strong Disagree</option>
                                 <option value="2">Two</option>
@@ -108,7 +108,7 @@
                             </h3>
                             <h4>Do you believe in God?</h4>
                             <div class="form-group">
-                                <select class="custom-select form-control">
+                                <select id="q6" class="custom-select form-control">
                                     <option selected>Open this select menu</option>
                                     <option value="1">Strong Disagree</option>
                                     <option value="2">Two</option>
@@ -124,7 +124,7 @@
                                 </h3>
                                 <h4>Do you want to get married?</h4>
                                 <div class="form-group">
-                                    <select class="custom-select form-control">
+                                    <select id="q7" class="custom-select form-control">
                                         <option selected>Open this select menu</option>
                                         <option value="1">Strong Disagree</option>
                                         <option value="2">Two</option>
@@ -140,7 +140,7 @@
                                     </h3>
                                     <h4>Are you close to your family?</h4>
                                     <div class="form-group">
-                                        <select class="custom-select form-control">
+                                        <select id="q8" class="custom-select form-control">
                                             <option selected>Open this select menu</option>
                                             <option value="1">Strong Disagree</option>
                                             <option value="2">Two</option>
@@ -156,7 +156,7 @@
                                         </h3>
                                         <h4>Do you want any pets?</h4>
                                         <div class="form-group">
-                                            <select class="custom-select form-control">
+                                            <select id="q9" class="custom-select form-control">
                                                 <option selected>Open this select menu</option>
                                                 <option value="1">Strong Disagree</option>
                                                 <option value="2">Two</option>
@@ -173,7 +173,7 @@
                                             </h3>
                                             <h4>How important is your job?</h4>
                                             <div class="form-group">
-                                                <select class="custom-select form-control">
+                                                <select id="q10" class="custom-select form-control">
                                                     <option selected>Open this select menu</option>
                                                     <option value="1">Strong Disagree</option>
                                                     <option value="2">Two</option>
@@ -194,91 +194,108 @@
                                                     Submit
                                                 </button>
                                                 <hr>
-
-                                                <div class="modal-body">
-                                                    <img id: "matchImg" src="" atl="Placeholder of Image" </div> <footer
-                                                        class="footer">
-                                                    <div class="container">
-                                                        <p>
-                                                            <a href="/api/friends">API Friends List</a>
-                                                            <a
-                                                                href="https://github.com/https://github.com/tonyalynn1970/friend-finder">GitHub
-                                                                Repo</a>
-                                                        </p>
-                                                    </div>
-                                                    </footer>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img id: "matchImg" src="" atl="Placeholder of Image" </div> <footer
+                                                    class="footer">
+                                                <div class="container">
+                                                    <p>
+                                                        <a href="/api/friends">API Friends List</a>
+                                                        <a
+                                                            href="https://github.com/https://github.com/tonyalynn1970/friend-finder">GitHub
+                                                            Repo</a>
+                                                    </p>
                                                 </div>
-                                                <div id="result-modal" class="modal fade" role="dialog">
-                                                    <div class="modal-dialog">
-                                                        <div class="modal-content">
-                                                            <div class="modal-header">
-                                                                <button type="button" class="close"
-                                                                    data-dismiss="modal"></button>
-                                                                <h2 class="modal-title">
-                                                                    <strong>Best Match</strong>
-                                                                </h2>
-                                                            </div>
-                                                            <div class="modal-body">
-                                                                <h2 id="match-name"></h2>
-                                                                <img id="match-img" src="" alt>
-                                                            </div>
-                                                            <div class="modal-footer">
-                                                                <button type="button" class="btn btn-default"
-                                                                    data-dismiss="modal">Close</button>
-                                                            </div>
+
+                                            </div>
+                                            <div id="result-modal" class="modal fade" role="dialog">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close"
+                                                                data-dismiss="modal"></button>
+                                                            <h2 class="modal-title">
+                                                                <strong>Best Match</strong>
+                                                            </h2>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <h2 id="match-name"></h2>
+                                                            <img id="match-img" src="" alt>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-default"
+                                                                data-dismiss="modal">Close</button>
                                                         </div>
                                                     </div>
                                                 </div>
+                                            </div>
 
-                                                <script src="https://code.jquery.com/jquery.js"></script>
-                                                <script
-                                                    src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
-                                                <script
-                                                    src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-                                                <script type="text/javascript">
 
-                                                    $(".chosen-select").chosen();
 
-                                                    $("#submit").on("click", function (event) {
-                                                        event.preventDefault();
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
 
-                                                        // function validateForm() {
-                                                        //     var isValid = true;
-                                                        //     $(".form-control").each(function () {
-                                                        //         if ($(this).value() === "") isValid = false;
+        $(".chosen-select").chosen();
 
-                                                        //     });
-                                                        //     $("chosen-select").each(function () {
-                                                        //         if ($(this).val() === "")
-                                                        //             isValid = false;
-                                                        //     });
-                                                        //     return isValid;
-                                                        // }
-                                                        // if (validateForm()) {
-                                                        var userData = {
-                                                            name: $("name").val(),
-                                                            photo: $("#photo").val(),
-                                                            scores: [
-                                                                $("#q1").val(),
-                                                                $("#q2").val(),
-                                                                $("#q3").val(),
-                                                                $("#q4").val(),
-                                                                $("#q5").val(),
-                                                                $("#q6").val(),
-                                                                $("#q7").val(),
-                                                                $("#q8").val(),
-                                                                $("##q10").val()
-                                                            ]
-                                                        }
-                                                        // var currentURL = window.location.origin;
+        $("#submit").on("click", function (event) {
+            event.preventDefault();
 
-                                                        $.post("/api/friends", friends, function (data) {
-                                                            $("#matchName").text(data.name);
-                                                            $("#matchImg").att("src", data.photo);
-                                                            $("#friendsModal").modal("toggle");
-                                                        });
+            function validateForm() {
+                var isValid = true;
+                $(".form-control").each(function () {
+                    if ($(this).val() === "") isValid = false;
 
-                                                        return false;
+                });
+                $("chosen-select").each(function () {
+                    if ($(this).val() === "")
+                        isValid = false;
+                });
+                return isValid;
+            }
+            if (validateForm()) {
+                var userData = {
+                    name: $("#name").val(),
+                    photo: $("#photo").val(),
+                    scores: [
+                        $("#q1").val(),
+                        $("#q2").val(),
+                        $("#q3").val(),
+                        $("#q4").val(),
+                        $("#q5").val(),
+                        $("#q6").val(),
+                        $("#q7").val(),
+                        $("#q8").val(),
+                        $("#q9").val(),
+                        $("#q10").val()
+                    ]
+                }
+                var currentURL = window.location.origin;
 
-                                                    });
-                                                </script>
+                $.post("/api/friends", userData, function (data) {
+                    $("#match-name").text(data.name);
+                    $("#match-img").attr("src", data.photo);
+                    $("#result-modal").modal("toggle");
+
+                    return false;
+                });
+
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>

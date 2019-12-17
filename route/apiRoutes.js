@@ -7,8 +7,10 @@ module.exports = function (app) {
         res.json(friends);
     });
 
-    app.post('/api/friends', function (req, res) {
+
+    app.post("/api/friends", function (req, res) {
         var totalDifference = 0;
+
 
         var bestMatch = {
             name: "",
@@ -17,9 +19,9 @@ module.exports = function (app) {
         };
 
         var userData = req.body;
-        var newFriendScores = req.body.scores;
-        var userScores = userData.scores;
         var userName = userData.name;
+        var userScores = userData.scores;
+
         var userPhoto = userData.photo;
 
 
@@ -37,9 +39,10 @@ module.exports = function (app) {
                 }
             }
 
-            friends.push(userData);
-            res.json(bestMatch);
+
         }
+        friends.push(userData);
+        res.json(bestMatch);
 
 
     });
